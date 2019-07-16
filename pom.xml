@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ai.turbochain.ipex</groupId>
+	<artifactId>ipex-wallet-rpc</artifactId>
+	<version>1.0.1</version>
+	<packaging>pom</packaging>
+    <description>数字货币交易系统父节点</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+        <relativePath />
+    </parent>
+
+	<distributionManagement>
+	    <repository>
+	        <id>ipex-release</id>
+	        <name>sinopec Release Repository</name>
+	        <url>http://maven.openserver.cn:8090/repository/ipex-release/</url>
+	    </repository>
+	    <snapshotRepository>
+	        <id>ipex-snapshot</id>
+	        <name>sinopec Snapshot Repository</name>
+	        <url>http://maven.openserver.cn:8090/repository/ipex-snapshot/</url>
+	    </snapshotRepository>
+	</distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <project-version>1.0.1</project-version>
+        <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
+    </properties>
+    <dependencyManagement>
+    	<dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.31</version>
+            </dependency>
+            <dependency>
+                <groupId>org.web3j</groupId>
+                <artifactId>core</artifactId>
+                <version>3.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>1.5.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <optional>true</optional>
+                <version>1.16.20</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spark.bc</groupId>
+                <artifactId>bitcoin-rpc</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.turbochain.ipex</groupId>
+                <artifactId>rpc-common</artifactId>
+                <version>${project-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ai.turbochain.ipex</groupId>
+                <artifactId>ipex-eth-support</artifactId>
+                <version>${project-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.web3j</groupId>
+                <artifactId>core</artifactId>
+                <version>3.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mashape.unirest</groupId>
+                <artifactId>unirest-java</artifactId>
+                <version>1.4.9</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+</project>
