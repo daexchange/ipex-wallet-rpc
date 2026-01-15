@@ -28,7 +28,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <project-version>1.0.1</project-version>
         <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
     </properties>
